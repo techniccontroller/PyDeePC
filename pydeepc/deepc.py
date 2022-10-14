@@ -170,7 +170,7 @@ class DeePC(object):
             raise Exception(f'Error while constructing the DeePC problem. Details: {e}')
 
         self.optimization_problem = OptimizationProblem(
-            variables = OptimizationProblemVariables(u_ini = uini, y_ini = yini, u = u, y = y, g = g, sigma_y = sigma_y),
+            variables = OptimizationProblemVariables(u_ini = uini, y_ini = yini, u = u, y = y, g = g, sigma_y = sigma_y, sigma_u=sigma_u),
             constraints = constraints,
             objective_function = problem_loss,
             problem = problem
